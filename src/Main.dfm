@@ -18,45 +18,45 @@ object frmMain: TfrmMain
   TextHeight = 20
   object lbl1: TLabel
     Left = 440
-    Top = 449
+    Top = 425
     Width = 120
     Height = 20
     Caption = #33258#21160#25250#31080#20498#35760#26102#65306
   end
   object lblCountdown: TLabel
     Left = 440
-    Top = 473
+    Top = 449
     Width = 103
     Height = 20
     Caption = 'lblCountdown'
   end
   object lbl2: TLabel
     Left = 440
-    Top = 255
+    Top = 231
     Width = 45
     Height = 20
     Caption = #29992#25143'ID'
   end
   object Label1: TLabel
     Left = 440
-    Top = 311
+    Top = 287
     Width = 75
     Height = 20
     Caption = #26381#21153#22120#26102#38388
   end
   object Label2: TLabel
     Left = 440
-    Top = 367
+    Top = 343
     Width = 60
     Height = 20
     Caption = #26412#22320#26102#38388
   end
   object lbl3: TLabel
     Left = 440
-    Top = 151
-    Width = 69
+    Top = 23
+    Width = 214
     Height = 20
-    Caption = '1'#12289#20808#30331#24405
+    Caption = '1'#12289#20808#30331#24405'('#21452#20987#21015#34920#21487#33258#21160#36755#20837')'
   end
   object wb: TWebBrowser
     Left = 0
@@ -75,7 +75,7 @@ object frmMain: TfrmMain
   end
   object edtUserID: TEdit
     Left = 440
-    Top = 279
+    Top = 255
     Width = 225
     Height = 28
     ImeName = 'Chinese (Simplified) - US Keyboard'
@@ -84,7 +84,7 @@ object frmMain: TfrmMain
   end
   object edtServerTime: TEdit
     Left = 440
-    Top = 335
+    Top = 311
     Width = 225
     Height = 28
     ImeName = 'Chinese (Simplified) - US Keyboard'
@@ -93,7 +93,7 @@ object frmMain: TfrmMain
   end
   object edtLocalTime: TEdit
     Left = 440
-    Top = 391
+    Top = 367
     Width = 225
     Height = 28
     ImeName = 'Chinese (Simplified) - US Keyboard'
@@ -108,6 +108,25 @@ object frmMain: TfrmMain
     Caption = '2'#12289#24050#25104#21151#30331#24405#65292#28857#20987#33719#21462#20449#24687
     TabOrder = 1
     OnClick = btnAnalyzeClick
+  end
+  object lvUserList: TListView
+    Left = 440
+    Top = 48
+    Width = 225
+    Height = 113
+    Columns = <
+      item
+        AutoSize = True
+        Caption = #29992#25143#21517
+      end
+      item
+        AutoSize = True
+        Caption = #23494#30721
+      end>
+    RowSelect = True
+    TabOrder = 5
+    ViewStyle = vsReport
+    OnDblClick = lvUserListDblClick
   end
   object XPManifest1: TXPManifest
     Left = 432
@@ -124,6 +143,13 @@ object frmMain: TfrmMain
     Interval = 200
     OnTimer = tmrTicketTimer
     Left = 552
+    Top = 16
+  end
+  object tmrKeepLogin: TTimer
+    Enabled = False
+    Interval = 30000
+    OnTimer = tmrKeepLoginTimer
+    Left = 608
     Top = 16
   end
 end
