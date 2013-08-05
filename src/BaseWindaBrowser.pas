@@ -74,7 +74,7 @@ end;
 procedure TfrmBaseWindaBrowser.wbDocumentComplete(Sender: TObject;
   const pDisp: IDispatch; var URL: OleVariant);
 begin
-  if Pos('抢到了', Self.GetWebDoc.body.innerText) > 0 then
+  if Pos('在APP中选择', Self.GetWebDoc.body.innerText) > 0 then
   begin
     if Assigned(FOnSuccess) then
       FOnSuccess(Self);
