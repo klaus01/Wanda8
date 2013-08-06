@@ -118,6 +118,7 @@ begin
   // 开始到倒计时
   if (edtUserID.Text <> '') and (edtServerTime.Text <> '') then
   begin
+    lvUserList.Enabled := False;
     btnAnalyze.Enabled := False;
     tmrCountdown.Enabled := True;
     tmrKeepLogin.Enabled := True;
@@ -139,7 +140,7 @@ begin
   lblCountdown.Caption := '';
 
   FLocalTime := 0;
-  FTicketBeginTime := Trunc(Now) + EncodeTime(9, 58, 0, 0);
+  FTicketBeginTime := Trunc(Now) + EncodeTime(9, 59, 58, 0);
 //  FTicketBeginTime := Trunc(Now) + EncodeTime(13, 51, 0, 0);
 
   Self.LoadUserList;
